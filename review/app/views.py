@@ -22,9 +22,10 @@ def product_view(request, pk):
 
     form = ReviewForm
     if request.method == 'POST':
-        # логика для добавления отзыва
+        review = Review.objects.create(text=form)
+        review.save()
+    else:
         pass
-
     context = {
         'form': form,
         'product': product

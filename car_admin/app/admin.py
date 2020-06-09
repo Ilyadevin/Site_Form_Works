@@ -12,5 +12,9 @@ class ReviewAdmin(admin.ModelAdmin):
     form = ReviewAdminForm
 
 
+class SearchForNames(admin.ModelAdmin.search_fields):
+    search_fields = ['BRAND', 'REVIEW COUNT']
+
+
 admin.site.register(Car, CarAdmin)
 admin.site.register(Review, ReviewAdmin)

@@ -1,10 +1,12 @@
 from django import forms
+from .models import Review
+
+from ckeditor.widgets import CKEditorWidget
 
 
 class ReviewAdminForm(forms.ModelForm):
-    brand = forms.CharField(label='brand', max_length=15)
-    mark = forms.CharField(label='model', max_length=64)
-    review = forms.CharField(label='Review', )
+    text = forms.CharField(widget=CKEditorWidget())
 
     class Meta:
-        fields = ('car', 'title', 'text')
+        model = Review
+        fields = ['car', 'title', 'text']

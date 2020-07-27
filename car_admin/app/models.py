@@ -18,4 +18,4 @@ class Review(models.Model):
     text = models.TextField()
 
     def __str__(self):
-        return str(self.car) + ' ' + self.title
+        return str(self.car) + ' ' + str(self.title)

@@ -5,7 +5,8 @@ from .forms import ReviewAdminForm
 
 
 class ReviewAdmin(admin.ModelAdmin):
-    model = Review
+    model = Car
+    review = Review
     form = ReviewAdminForm
 
 

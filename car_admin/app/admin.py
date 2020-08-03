@@ -5,9 +5,10 @@ from .forms import ReviewAdminForm
 
 
 class ReviewAdmin(admin.ModelAdmin):
-    model = Car
+    model = "qwe"
     review = Review
     form = ReviewAdminForm
 
 
+admin.site.register(Car, ReviewAdmin)
 admin.site.register(Review, ReviewAdmin)
